@@ -1,23 +1,31 @@
-def parallel_processing(n, m, data):
+import math
+
+def parallel_processing(a, b, data):
     output = []
-    check = [0]*n
-    num = 0
-    for i in range(m):
-        t = data[i]
-        thread = min(threads, key=lambda x: x[1])  
-        output.append((thread[0], thread[1]))  
-        threads[threads.index(thread)] = (thread[0], thread[1] + t)  
+    check = [0]*b
+    number = 0
+    for c in range(math.ceil(b/a):
+        for i in range(a:
+            output.append((i, check[i]))
+            check[i]+=data[number]
+            number+=1
+            if number>=b:
+                break
     return output
 
 def main():
-    nr = input()
-    nr = nr.split()
-    n = int(nr[0])
-    m = int(nr[1])
+
+    num = input()
+    num = num.split()
+    #a- thread skaits
+    #b- job skaits
+    a= int(num[0])
+    b= int(num[0])
     data = list(map(int, input().split()))
     result = parallel_processing(n,m,data)
+
     for i, j in result:
         print(i, j)
-        
+
 if __name__ == "__main__":
     main()
